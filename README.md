@@ -13,7 +13,7 @@ Para configurar o atalho, rode o seguinte comando:
 
 Ubuntu:
 ```
-wget -qO- https://raw.githubusercontent.com/terciotales/phpstorm-nautilus/main/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/jhmaverick/phpstorm-nautilus/main/install.sh | bash
 ```
 
 
@@ -41,7 +41,7 @@ To set up the shortcut, run the following command:
 
 Ubuntu:
 ```
-wget -qO- https://raw.githubusercontent.com/terciotales/phpstorm-nautilus/main/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/jhmaverick/phpstorm-nautilus/main/install.sh | bash
 ```
 
 
