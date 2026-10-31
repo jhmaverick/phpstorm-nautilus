@@ -6,7 +6,18 @@
 # This script is released to the public domain.
 
 import gi
-gi.require_version('Nautilus', '4.0')
+
+# O loader do nautilus-python já define a versão da API antes de carregar a extensão
+# (4.0 até o Nautilus 49, 4.1 a partir do Nautilus 50 / Ubuntu 26.04).
+# Pedir outra versão aqui gera ValueError e o Nautilus ignora a extensão silenciosamente.
+if gi.get_required_version('Nautilus') is None:
+    for nautilus_version in ('4.1', '4.0'):
+        try:
+            gi.require_version('Nautilus', nautilus_version)
+            break
+        except ValueError:
+            pass
+
 from gi.repository import Nautilus, GObject
 from subprocess import call, Popen, PIPE
 import os
